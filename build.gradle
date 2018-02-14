@@ -1,0 +1,21 @@
+group 'trey'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter() //This prevents issues with transitive dependencies
+    maven {
+        url  "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compile group: 'com.github.austinv11', name: 'Discord4J', version: '2.9.3'
+    compile group: 'com.github.xaanit', name: 'D4J-OAuth', version: '7809e1d'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
